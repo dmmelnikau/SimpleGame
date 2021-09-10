@@ -10,8 +10,6 @@ namespace Game
     {
         static void Main(string[] args)
         {
-         
-        
             var set = new HashSet<string>();
             foreach (var n in args)
                 if (!set.Add(n))
@@ -19,20 +17,18 @@ namespace Game
                     Console.WriteLine("Enter an odd non-repeating number of parameters >= 3 (one, two, three, four, five)");
                     return;
                 }
-            
-            if ((args.Length % 2.0 != 0) && (args.Length >= 3) )
+            Validation(args);
+        }
+        public static void Validation( string[] args)
+        {
+            if ((args.Length % 2.0 != 0) && (args.Length >= 3))
             {
                 Rules.PlayGame();
-             
             }
             else
             {
                 Console.WriteLine("Enter an odd non-repeating number of parameters >= 3 (one, two, three, four, five)");
             }
-
-       
-           
-
         }
     }
   
