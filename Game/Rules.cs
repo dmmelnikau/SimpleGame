@@ -19,6 +19,7 @@ namespace Game
             bool isValid = false;
             do
             {
+                Console.WriteLine("New Game");
                 var generator = new Random();
                 var randomChoice = generator.Next(1, arg_cmd.Length);
                 Message = "Computer move:" + arg_cmd[randomChoice - 1];
