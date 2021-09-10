@@ -60,17 +60,18 @@ namespace Game
             for (int i = 0; i < m + 1; i++)
             {
               
-                Console.Write(new String('-', 8*(m+1)) + "\n");
+                Console.Write(new String('-', 16*(m+1)) + "\n");
                 for (int j = 0; j < m + 1; j++)
                 {
                     
-                    Console.Write(arr[i, j]     +     "\t" + "|");
+                    Console.Write(arr[i, j]+"\t\t" + "|");
                 
                 }
             
                 Console.WriteLine();
             }
-            Console.WriteLine("-------------------------------------------------");
+
+            Console.WriteLine(new String('-', 16 * (m + 1)));
 
         }
 

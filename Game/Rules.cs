@@ -23,6 +23,7 @@ namespace Game
                 var randomChoice = generator.Next(1, arg_cmd.Length);
                 Message = "Computer move:" + arg_cmd[randomChoice - 1];
                 string hmac_hex_key = HMACkey.HmacSha256(Key.Gen(), Rules.Message);
+                
                 Console.WriteLine("HMAC:" + hmac_hex_key);
                 Console.WriteLine("Avaliable moves:");
                 for (int i = 0; i < arg_cmd.Length; i++)
@@ -39,7 +40,7 @@ namespace Game
                         Console.WriteLine("Your move:{0}", arg_cmd[selection - 1]);
                        
                     
-                      Console.WriteLine("Computer move:{0}", arg_cmd[randomChoice - 1]);
+                         Console.WriteLine("Computer move:{0}", arg_cmd[randomChoice - 1]);
                       //  Console.WriteLine(Message);
                         if (selection == randomChoice) Console.WriteLine("Draw");
                         if ((selection < randomChoice) && ((selection + arg_cmd.Length / 2.0) < randomChoice))
