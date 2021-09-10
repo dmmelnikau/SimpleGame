@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,17 +59,19 @@ namespace Game
 
             for (int i = 0; i < m + 1; i++)
             {
-                
+              
+                Console.Write(new String('-', 8*(m+1)) + "\n");
                 for (int j = 0; j < m + 1; j++)
                 {
-                    Console.Write(" ");
-                    Console.Write(arr[i, j] + "\t");
-
-
+                    
+                    Console.Write(arr[i, j]     +     "\t" + "|");
+                
                 }
-
+            
                 Console.WriteLine();
             }
+            Console.WriteLine("-------------------------------------------------");
+
         }
 
     }
